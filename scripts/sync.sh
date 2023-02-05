@@ -33,7 +33,7 @@ if [ -z "$SYNC_BRANCH" ]; then
 fi
 
 # Sync the Sources
-bash orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
+bash orangefox_sync.sh --branch fox_9.0 --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
 
 # Change to the Source Directory
 cd $SYNC_PATH
@@ -41,11 +41,6 @@ cd $SYNC_PATH
 # Clone the theme if not already present
 if [ ! -d bootable/recovery/gui/theme ]; then
 git clone https://gitlab.com/OrangeFox/misc/theme.git bootable/recovery/gui/theme || { echo "ERROR: Failed to Clone the OrangeFox Theme!" && exit 1; }
-fi
-
-# Clone the Commonsys repo, only for fox_9.0
-if [ "$FOX_BRANCH" = "fox_9.0" ]; then
-git clone --depth=1 https://github.com/TeamWin/android_vendor_qcom_opensource_commonsys.git -b android-9.0 vendor/qcom/opensource/commonsys || { echo "WARNING: Failed to Clone the Commonsys Repo!"; }
 fi
 
 # Clone Trees
