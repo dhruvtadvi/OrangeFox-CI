@@ -10,6 +10,6 @@ OrangeFox-CI:
   script:
     - source config.sh
     - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh | bash
-    - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh | bash
+    - curl -sL https://raw.githubusercontent.com/dhruvtadvi/OrangeFox-CI/main/scripts/sync.sh | bash
     - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh | bash
     - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/upload.sh | bash
