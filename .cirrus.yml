@@ -24,7 +24,7 @@ task:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
 
   Sync_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/dhruvtadvi/OrangeFox-CI/main/scripts/sync.sh)"
 
   Build_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh)"
