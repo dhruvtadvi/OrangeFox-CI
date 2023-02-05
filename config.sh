@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/dhruvtadvi/android_recovery_tecno_ke6 -b main"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="tecno"
+export OEM="KE6"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -17,12 +17,9 @@ export OUTPUT="OrangeFox*.zip"
 
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
-DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
-)
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=natu"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
