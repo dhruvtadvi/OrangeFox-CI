@@ -33,7 +33,13 @@ if [ -z "$SYNC_BRANCH" ]; then
 fi
 
 # Sync the Sources
-bash orangefox_sync.sh --branch fox_9.0 --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
+git config --global user.email "${GIT_EMAIL}"
+git config --global user.name "{GIT_NAME}"
+git config --global color.ui false
+curl https://storage.googleapis.com/git-repo-downloads/repo > repo
+chmod a+x repo
+repo init -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
+repo sync
 
 # Change to the Source Directory
 cd $SYNC_PATH
